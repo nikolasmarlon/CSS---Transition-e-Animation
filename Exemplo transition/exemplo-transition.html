@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Trasition Dalay</title>
+
+    <style>
+
+        /*Formatação Body*/
+        body{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+        /*Fim Formatação Body*/
+
+        /*Formatação geral círculos*/
+        .box-red, .box-green, .box-blue, .box-yellow{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+        }
+        /*Fim Formatação geral círculos*/
+
+        /*Estilo Círculo vermelho*/
+        .box-red{
+            background-color: red;
+            
+            transition: background-color 1s;
+        }
+        .box-red:hover{
+            background-color: blue;
+            transition-property: background-color;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            transition-delay: 1s;            
+        }
+        /*Fim Estilo Círculo vermelho*/
+
+        /*Estilo Círculo verde*/
+        .box-green{
+            margin-left: 5px;
+            background-color: green;
+            transition: all 1s linear 1s;
+        }
+        .box-green:hover{
+            transition: all 1s cubic-bezier(.29, 1.01, 1, -0.68);
+            background-color: blueviolet;
+            width: 300px;
+            height: 300px;
+            border-radius: 8px;
+        }
+        /*Fim Estilo Círculo verde*/
+
+        /*Estilo Círculo azul*/
+        .box-blue{
+            background-color: blue;
+            transition: all 1s linear 2s;
+        }
+        .box-blue:hover{
+            transition: width 1s ease-in-out 0s;
+            width: 200px;            
+        }
+        /*Fim Estilo Círculo azul*/
+
+        /*Estilo Círculo amarelo*/
+        .box-yellow{
+            background-color: yellow;
+            transition: opacity 1s linear 1s;
+        }
+        .box-yellow:hover{
+            opacity: 0.2;
+            transition: opacity 1s linear;
+        }
+        /*Fim Estilo Círculo amarelo*/
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="box-red"></div>
+    <div class="box-green"></div>
+    <div class="box-blue"></div>
+    <div class="box-yellow"></div>
+</body>
+</html>
