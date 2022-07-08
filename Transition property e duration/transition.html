@@ -17,11 +17,24 @@
             height: 100px;
             border-radius: 100%;
             background-color: #f00;
+            /*precisa selecionar a propriedade para aplicar o transition
+            também pode ser usado o transition-property: all - vai aplicar transition em qualquer propriedade*/
+            transition-property: background-color, width;
+            transition-duration: 2s;
+        }
+        .box-red:hover{
+            background-color: #ff0;
+            /*precisa selecionar a propriedade para aplicar o transition
+            também pode ser usado o transition-property: all - vai aplicar transition em qualquer propriedade*/
+            transition-property: all;
+            transition-duration: 1s;
+            width: 200px;
         }
     
     </style>
 </head>
 <body>
+    <!-- Div com a classe box-red-->
     <div class="box-red"></div>
 </body>
 </html>
