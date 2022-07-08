@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Trasition Dalay</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box-red, .box-green{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+        }
+        .box-red{
+            background-color: red;
+            
+            transition: background-color 1s;
+        }
+        .box-green{
+            margin-left: 5px;
+            background-color: green;
+            transition: all 1s linear 1s;
+        }
+        .box-green:hover{
+            transition: all 1s cubic-bezier(.29, 1.01, 1, -0.68);
+            background-color: blueviolet;
+            width: 300px;
+            height: 300px;
+            border-radius: 8px;
+
+        }
+        .box-red:hover{
+            background-color: blue;
+            transition-property: background-color;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            transition-delay: 1s;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box-red"></div>
+    <div class="box-green"></div>
+</body>
+</html>
