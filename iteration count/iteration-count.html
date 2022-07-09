@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes </title>
+
+    <style>
+        .ball-2{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background-color: black;
+            position: relative;
+            animation-name: muda-cor-2;
+            animation-duration: 6s; 
+            animation-delay: 1.3s;
+            /*animation-iteration-count: 3;*/
+            animation-iteration-count: infinite;
+        }
+
+        /*Animation exemple-two*/
+        /*exemplo de movimentos na tela*/
+
+        @keyframes muda-cor-2{
+            0%{
+                background-color: black;
+                left: 0;
+                top: 0;
+
+            }
+            25%{
+                background-color: blue;
+                left: 300px;
+                top: 0;
+            }
+            50%{
+                background-color: brown;
+                top: 300px;
+                left: 300px;
+            }
+            75%{
+                background-color: yellowgreen;
+                top: 300px;
+                left: 0px; 
+            }
+            100%{
+                background-color: black;
+                top: 0px;
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ball-2"></div>
+</body>
+</html>
